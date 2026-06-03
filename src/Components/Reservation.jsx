@@ -121,7 +121,7 @@ export default function Reservation() {
               type="date"
               value={formdata.date}
               onChange={handleChange}
-              min={new Date().toISOString().split("T")[0]}
+              placeholder="Select Date"
               className="w-full px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
             />
 
@@ -143,6 +143,7 @@ export default function Reservation() {
               type="time"
               value={formdata.time}
               onChange={handleChange}
+              placeholder="Select Booking Time"
               className="w-full px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
             />
 
