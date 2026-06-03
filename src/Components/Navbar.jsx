@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div>
-      <nav className="fixed w-full bg-white/90 backdrop-blur-[100%] shadow-sm z-50">
+      <nav className="fixed w-full p-3 bg-white/90 backdrop-blur-[100%] shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -19,7 +19,7 @@ const Navbar = () => {
               </a>
             </div>
             {/* menu for big screens */}
-            <div className="hidden lg:flex items-center space-x-5 text-sm">
+            <div className="hidden lg:flex items-center space-x-5 text-[20px] md:text-[17px]">
               <a
                 href="#home"
                 className="text-neutral-700 hover:text-orange-500 transition-all duration-300"
@@ -111,42 +111,42 @@ const Navbar = () => {
             <a
               href="#home"
               onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
+              className="text-neutral-700 py-2 transition-all duration-300"
             >
               Home
             </a>
             <a
               href="#about"
               onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
+              className="text-neutral-700 py-2 transition-all duration-300"
             >
               About
             </a>
             <a
               href="#menu"
               onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
+              className="text-neutral-700 py-2 transition-all duration-300"
             >
               Menu
             </a>
             <a
               href="#reservation"
               onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
+              className="text-neutral-700 py-2 transition-all duration-300"
             >
               Reservation
             </a>
             <a
               href="#reviews"
               onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
+              className="text-neutral-700 py-2 transition-all duration-300"
             >
               Reviews
             </a>
             <a
               href="#contact"
               onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
+              className="text-neutral-700 py-2 transition-all duration-300"
             >
               Contact
             </a>
