@@ -39,12 +39,6 @@ const Navbar = () => {
                 Menu
               </a>
               <a
-                href="#gallery"
-                className="text-neutral-700 hover:text-orange-500 transition-all duration-300"
-              >
-                Gallery
-              </a>
-              <a
                 href="#reservation"
                 className="text-neutral-700 hover:text-orange-500 transition-all duration-300"
               >
@@ -134,13 +128,6 @@ const Navbar = () => {
               className="text-black py-2 transition-all duration-300"
             >
               Menu
-            </a>
-            <a
-              href="#gallery"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-black py-2 transition-all duration-300"
-            >
-              Gallery
             </a>
             <a
               href="#reservation"
