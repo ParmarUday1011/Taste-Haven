@@ -122,7 +122,7 @@ export default function Reservation() {
               value={formdata.date}
               onChange={handleChange}
               min={new Date().toISOString().split("T")[0]}
-              className="w-full rounded-xl px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
+              className="w-full px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
             />
 
             {formErrors.date && (
@@ -143,7 +143,7 @@ export default function Reservation() {
               type="time"
               value={formdata.time}
               onChange={handleChange}
-              className="px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
+              className="w-full px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
             />
 
             {formErrors.time && (
