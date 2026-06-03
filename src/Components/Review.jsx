@@ -7,7 +7,7 @@ const reviews = [
     role: "Food Critic",
     review:
       "The ambiance was wonderful, and the dishes were cooked to perfection. A must-visit place for every foodie!",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
+    img: "https://plus.unsplash.com/premium_photo-1691030256264-59cdf9414ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const reviews = [
     role: "Regular Customer",
     review:
       "Service was absolutely excellent. The staff is very polite, and the Mutton Biryani is highly recommended!",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80",
+    img: "https://plus.unsplash.com/premium_photo-1682089894837-e01e5cb8e471?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg4fHxpbmRpYW4lMjBnaXJsfGVufDB8fDB8fHww",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const reviews = [
     role: "Regular Customer",
     review:
       "The food is always delicious, and the service is prompt. I love coming here for dinner with my family!",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
+    img: "https://images.unsplash.com/photo-1694871420666-d55d3649ea40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 

@@ -10,7 +10,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex items-center space-x-1">
               <a
-                href="home"
+                href="#home"
                 className="flex items-center space-x-1 cursor-pointer"
               >
                <h1 className="text-2xl lg:text-3xl font-bold tracking-wide">

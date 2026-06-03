@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const menu_items = [
   {
     id: 1,
@@ -191,6 +193,10 @@ const menu_items = [
 
 
 export default function Menu() {
+  const [showfull,setSowfull]=useState(false)
+  const allitens = showfull ? menu_items : menu_items.slice(0,3)
+
+
   return (
     <div>
       <section id="menu" className="py-20 bg-[#F5E6CC]">
@@ -201,7 +207,7 @@ export default function Menu() {
           <div className="w-40 h-1 bg-orange-500 mx-auto mt-4"></div>
           {/* menu grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-            {menu_items.map((item) => (
+            {allitens.map((item) => (
               <div
                 key={item.id}
                 className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
@@ -236,6 +242,12 @@ export default function Menu() {
                 </div>
               </div>
             ))}
+          </div>
+          {/* show full menu */}
+          <div className="text-center mt-12">
+            <button onClick={()=>setSowfull(!showfull)} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300">
+              {showfull ? "Show Less" : "View Full Menu"}
+            </button>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { FaLeaf, FaUserTie, FaUtensils, FaWineGlassAlt } from "react-icons/fa";
+import { FaLeaf, FaUserTie, FaUtensils, FaHotel  } from "react-icons/fa";
 
 export default function About() {
     return (
@@ -37,12 +37,12 @@ export default function About() {
                                 </div>
                                 <div className="flex items-center gap-4 hover:-translate-y-1 transition-all duration-300">
                                     <div className="bg-orange-500 text-white p-4 rounded-full shadow-md">
-                                        <FaWineGlassAlt size={20} />
+                                        <FaHotel  size={20} />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-neutral-900">Luxury Ambience</h4>
+                                        <h4 className="font-bold text-neutral-900">Rooftop Dining</h4>
                                         <p className="text-sm text-neutral-500">
-                                            Elegant interiors and cozy dining
+                                            Open-air rooftop restaurant experience
                                         </p>
                                     </div>
                                 </div>
