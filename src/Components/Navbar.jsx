@@ -13,7 +13,7 @@ const Navbar = () => {
                 href="#home"
                 className="flex items-center space-x-1 cursor-pointer"
               >
-               <h1 className="text-2xl lg:text-3xl font-bold tracking-wide">
+                <h1 className="text-2xl lg:text-3xl font-bold tracking-wide">
                   Taste <span className="text-orange-500">Haven</span>
                 </h1>
               </a>
@@ -111,61 +111,61 @@ const Navbar = () => {
         {/* mobile menu */}
 
         <div
-          className={`${isMenuOpen ? "block" : "hidden"} lg:hidden bg-white shadow-lg absolute w-full left-0 transition-all duration-300`}
+          className={`${isMenuOpen ? "block" : "hidden"} lg:hidden absolute top-16 left-0 w-full bg-white/90 backdrop-blur-xs transition-all duration-300`}
         >
           <div className="px-6 pt-4 pb-6 space-y-4 font-medium text-neutral-700 flex flex-col">
             <a
               href="#home"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 border-b border-neutral-50 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               Home
             </a>
             <a
               href="#about"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 border-b border-neutral-50 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               About
             </a>
             <a
               href="#menu"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 border-b border-neutral-50 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               Menu
             </a>
             <a
               href="#gallery"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 border-b border-neutral-50 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               Gallery
             </a>
             <a
               href="#reservation"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               Reservation
             </a>
             <a
               href="#reviews"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               Reviews
             </a>
             <a
               href="#contact"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-red-700 py-2 transition-all duration-300"
+              className="text-black py-2 transition-all duration-300"
             >
               Contact
             </a>
             <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 hover:scale-105 transition-all duration-300 shadow-md">
-                Book Table
-              </button>
+              Book Table
+            </button>
           </div>
         </div>
       </nav>
