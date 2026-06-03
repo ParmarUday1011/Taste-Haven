@@ -88,7 +88,7 @@ export default function Reservation() {
   };
 
   return (
-    <section id="reservation" className="py-20 bg-[#FFF8E7]">
+    <section id="reservation" className="py-20 pt-32 md:pt-20 scroll-mt-24 bg-[#FFF8E7]">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-neutral-900 mb-2">
           Make a Reservation
@@ -122,7 +122,7 @@ export default function Reservation() {
               value={formdata.date}
               onChange={handleChange}
               min={new Date().toISOString().split("T")[0]}
-              className="px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
+              className="w-full rounded-xl px-4 py-3 bg-white rounded-lg border border-neutral-300 focus:outline-none focus:border-orange-500"
             />
 
             {formErrors.date && (
