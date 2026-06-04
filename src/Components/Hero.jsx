@@ -1,4 +1,24 @@
+import { animate } from "framer-motion";
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+
+  function Counter({ value }) {
+  const [count,setcounter]=useState(0)
+
+  useEffect(()=>{
+    const control=animate(0,value,{
+      duration:3,
+      onUpdate(latest){
+        setcounter(Math.floor(latest))
+      }
+    })
+    return()=>control.stop()
+  },[value])
+    return <>{count}</>
+  }
+  
+
   return (
     <div>
       <section
@@ -42,17 +62,17 @@ export default function Hero() {
 
           <div className="grid grid-cols-3 gap-4 md:gap-10 mt-10 text-white">
             <div>
-              <h2 className="text-3xl font-bold">10+</h2>
+              <h2 className="text-3xl font-bold"><Counter value={10}/>+</h2>
               <p className="text-gray-300">Years Experience</p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold">50+</h2>
+              <h2 className="text-3xl font-bold"><Counter value={50}/>+</h2>
               <p className="text-gray-300">Premium Dishes</p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold">5000+</h2>
+              <h2 className="text-3xl font-bold"><Counter value={5000}/>+</h2>
               <p className="text-gray-300">Happy Customers</p>
             </div>
           </div>
