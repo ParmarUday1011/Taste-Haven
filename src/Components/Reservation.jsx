@@ -53,9 +53,7 @@ export default function Reservation() {
       errors.phoneNumber = "Phone number must be 10 digits";
     }
 
-    if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formdata.email)
-    ) {
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formdata.email)) {
       errors.email = "Invalid email address";
     }
 
@@ -64,31 +62,51 @@ export default function Reservation() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      setSubmitted("Your reservation has been confirmed!");
+      try {
+        await fetch(
+          "https://script.google.com/macros/s/AKfycbyDXZOfKTEE6xULSLmiSYnUsFTryLLjZ4gPgFvu0Td7JqCNR6VDxH156esjZ2wCaWFj9g/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formdata),
+          },
+        );
 
-      setFormdata({
-        date: "",
-        time: "",
-        partySize: "",
-        tablePreference: "",
-        fullName: "",
-        phoneNumber: "",
-        email: "",
-        specialRequest: "",
-      });
+        setSubmitted("Your reservation has been confirmed!");
 
-      setFormErrors({});
+        setFormdata({
+          date: "",
+          time: "",
+          partySize: "",
+          tablePreference: "",
+          fullName: "",
+          phoneNumber: "",
+          email: "",
+          specialRequest: "",
+        });
+
+        setFormErrors({});
+      } catch (error) {
+        console.error(error);
+        alert("Error sending data");
+      }
     } else {
       setSubmitted("");
     }
   };
 
   return (
-    <section id="reservation" className="py-20 pt-32 md:pt-20 scroll-mt-24 bg-[#FFF8E7]">
+    <section
+      id="reservation"
+      className="py-20 pt-32 md:pt-20 scroll-mt-24 bg-[#FFF8E7]"
+    >
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-neutral-900 mb-2">
           Make a Reservation
@@ -126,9 +144,7 @@ export default function Reservation() {
             />
 
             {formErrors.date && (
-              <p className="text-red-500 text-sm mt-1">
-                {formErrors.date}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{formErrors.date}</p>
             )}
           </div>
 
@@ -148,9 +164,7 @@ export default function Reservation() {
             />
 
             {formErrors.time && (
-              <p className="text-red-500 text-sm mt-1">
-                {formErrors.time}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{formErrors.time}</p>
             )}
           </div>
 
@@ -221,9 +235,7 @@ export default function Reservation() {
             />
 
             {formErrors.fullName && (
-              <p className="text-red-500 text-sm mt-1">
-                {formErrors.fullName}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{formErrors.fullName}</p>
             )}
           </div>
 
@@ -265,9 +277,7 @@ export default function Reservation() {
             />
 
             {formErrors.email && (
-              <p className="text-red-500 text-sm mt-1">
-                {formErrors.email}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
             )}
           </div>
 
