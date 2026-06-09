@@ -62,12 +62,12 @@ export default function Hero() {
 
           <div className="grid grid-cols-3 gap-4 md:gap-10 mt-10 text-white">
             <div>
-              <h2 className="text-3xl font-bold"><Counter value={10}/>+</h2>
+              <h2 className="text-3xl font-bold"><Counter value={20}/>+</h2>
               <p className="text-gray-300">Years Experience</p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold"><Counter value={50}/>+</h2>
+              <h2 className="text-3xl font-bold"><Counter value={70}/>+</h2>
               <p className="text-gray-300">Premium Dishes</p>
             </div>
 
