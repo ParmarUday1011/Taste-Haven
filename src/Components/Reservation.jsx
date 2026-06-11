@@ -118,12 +118,6 @@ export default function Reservation() {
           Book your table in advance to ensure the best dining experience
         </p>
 
-        {submitted && (
-          <div className="bg-green-100 text-green-700 py-3 px-4 rounded-lg mb-6">
-            {submitted}
-          </div>
-        )}
-
         <form
           onSubmit={handleSubmit}
           className="bg-[#fcf9f2]/50 border border-neutral-200 p-8 md:p-12 rounded-2xl shadow-sm text-left grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -303,7 +297,16 @@ export default function Reservation() {
           >
             Confirm Reservation
           </button>
+
+          {submitted && (
+          <div className="bg-green-100 text-green-700 md:col-span-2 font-medium py-4 lg:px-50 md:px-50 rounded-lg shadow-md transition-all text-lg mt-4">
+            {submitted}
+          </div>
+        )}
+
         </form>
+
+        
       </div>
     </section>
   );
